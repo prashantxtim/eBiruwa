@@ -1,0 +1,138 @@
+{% load static %}
+{% block content%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Payment Page Starts -->
+<head>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'donate.css' %}">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Page | eBiruwa</title>
+    <link rel="stylesheet" href="{% static '/eBiruwaDjango/main/static/donate.css' %}">
+    <link rel="stylesheet" href="{% static 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' %}">
+    <script src="https://kit.fontawesome.com/3a78a9c112.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="https://kit.fontawesome.com/3a78a9c112.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar sticky">
+        <div class="max-width">
+            <div class="logo"><a href="/index.html">eBiruwa</a></div>
+            <ul class="menu">
+                <li><a href="/index.html" class="menu-btn">Home</a></li>
+                <li><a href="/index.html#howitworks" class="menu-btn">How it Works</a></li>
+                <li><a href="/index.html#ourappeal" class="menu-btn">Our Appeal</a></li>
+                <li><a href="/index.html#donors" class="menu-btn">Top Donors</a></li>
+                <li><a href="/donate.html" class="menu-btn">Donate Now</a></li>
+                <li><a href="/LoginRegister.html">Login / Signup</a></li>
+
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+</body>    
+    <div class="wrapper">
+        <h2>Donate to eBiruwa</h2>
+        <form action="" method="post">
+            <!--Account Information Start-->
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Name of the Donor" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+
+            
+
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="email" placeholder="Email Address" required class="name">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Address" required class="name">
+                    <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="City" required class="name">
+                    <i class="fa fa-institution icon"></i>
+                </div>
+            </div>
+            <!--Account Information End-->
+
+            <!--Payment Details Start-->
+            <h4>Payment Details</h4>
+
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="Name on Card" required>
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="Card Number" required>
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="CVC" required>
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <div class="input_box">
+                        <input type="number" placeholder="Expiry Month" required class="name">
+                        <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <input type="number" placeholder="Expiry Year" required class="name">
+                    <i class="fa fa-calendar-o icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="input_box">
+                <input type="number" placeholder="Enter Amount ~ 1$ = 1 Tree Planted" required class="name">
+                <i class="fa fa-money icon" aria-hidden="true"></i>
+            </div>
+            <br>
+            <!--Payment Details End-->
+
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit">Pay Now</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+{% endblock %}

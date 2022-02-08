@@ -1,0 +1,182 @@
+{% load static %}
+{% block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website Title -->
+
+    <title>eBiruwa | $1 = 1 Tree Planted</title>
+
+    <!-- Favicon Starts-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static '/eBiruwa/Media/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static '/eBiruwa/Media/favicon-32x32.png' %}">
+    <link rel="i'con" type="image/png" sizes="16x16" href="{% static '/eBiruwa/Media//favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static '/eBiruwaDjango/main/static/Media/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static '/eBiruwaDjango/main/static/Media/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Favicon Ends-->
+
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <script src="https://kit.fontawesome.com/3a78a9c112.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar sticky">
+        <div class="max-width">
+            <div class="logo"><a href="/index.html">eBiruwa</a></div>
+            <ul class="menu">
+                <li><a href="index.html" class="menu-btn">Home</a></li>
+                <li><a href="#howitworks" class="menu-btn">How it Works</a></li>
+                <li><a href="#ourappeal" class="menu-btn">Our Appeal</a></li>
+                <li><a href="#donors" class="menu-btn">Top Donors</a></li>
+                <li><a href="donate.html" class="menu-btn">Donate Now</a></li>
+                <li><a href="LoginRegister.html">Login / Signup</a></li>
+
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- home section start -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Donate a Dollar Today and We will plant a Tree For The</div>
+                <div class="text-2">Planet & Humankind</div>
+                <div class="text-1"></div>
+                <a href="donate.html"><i class="fas fa-tree">&nbsp;</i> Donate Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- howitworks section start -->
+    <section class="howitworks" id="howitworks">
+        <div class="max-width">
+            <h2 class="title">How it works?</h2>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <div class="text">You Donate</div>
+                        <p>People send out donations to eBiruwa from across Nepal which we receive in our payment accounts.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-piggy-bank"></i>                
+                        <div class="text">We Collect</div>
+                        <p>After every donation, we collect the amount and proceed to planting the trees in different locations.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-tree"></i>                
+                        <div class="text">We plant</div>
+                        <p>Once we have the plants ready and location decided, we then plant a tree for every dollar donated to eBiruwa</p>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ourappeal section start -->
+    <section class="ourappeal" id="ourappeal">
+        <div class="max-width">
+            <h2 class="title">Our Appeal</h2>
+            <div class="ourappeal-content">
+                <div class="column left">
+                    <img src="{% static 'Media/Images/edited tree image.svg' %}" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">🌳 Let's Plant Trees For The Planet & Humankind.</div>
+                    <p>Join more than 100 people from 20 different countries worldwide in making this enviroment revolution a success. For every $1 you donate, we plant 1 tree somewhere in Nepal. <br><br> Do your part by donating at least $1. Click the "Donate Now" button below to make your donation in less than 5 minutes.<br><br> $1 Donated = 1 Tree Planted</p>
+                    <a href="donate.html"><i class="fas fa-tree">&nbsp;</i> Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- donors section start -->
+
+    <section class="donors" id="donors">
+        <div class="max-width">
+            <h2 class="title">Top Donors</h2>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'Media/Images/GOALFLIX LOGO.png' %}" height="150", width="150">
+                        <div class="text">GoalFlix</div>
+                        <p>Youtuber | Nepal <br> Trees Donated: 100</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'Media/Images/munatimilsena.png' %}" height="150", width="150">
+                        <div class="text">Muna Timilsena</div>
+                        <p>Student | Australia <br> Trees Donated: 50</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static '/Media/Images/bijayashahi.jpeg'%}" height="150", width="150">
+                        <div class="text">Bijaya Shahi</div>
+                        <p>Student | Nepal <br> Trees Donated: 35</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="box">
+                        <img src="{% static 'Media/Images/srijanabaduwal.png' %}" height="150", width="150">
+                        <div class="text">Srijana Baduwal</div>
+                        <p>Student | Nepal <br> Trees Donated: 20</p>
+                    </div>
+                </div>
+
+               </div>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- thankyou section stasrt -->
+   <section class="ourappeal" id="ourappeal">
+    <div class="max-width">
+        <h2 class="title">Thank You</h2>
+        <div class="ourappeal-content">
+            <div class="column left">
+                <img src="{% static 'Media/Images/edited multiple trees.svg' %}">
+            </div>
+            <div class="column right">
+                <div class="text">🌳 Do you want to save the world?</div>
+                <p>Scientists are saying that we have about 10 years to turn this environmental crisis around or we're screwed. You guys want to save the world? Of course, you do! <br><br> Donate a Dollar Today and We will plant a Tree For The Planet & Humankind<br><br> <strong> Why plant trees? </strong> <br><br> ~ Healthier Environment <br> ~ Reduces Global Warming <br> ~ Thousands of other benefits</p>
+                <a href="donate.html"><i class="fas fa-tree">&nbsp;</i> Donate Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+    <!-- footer section start -->
+    <footer>
+        <span>eBiruwa brought to you by <a href="https://www.youtube.com/channel/UC--VccSeRRyVgmhoyMaeqiQ">Prashanta Timilsena</a> | All rights reserved.</span>
+    </footer>
+</body>
+</html>
+
+{% endblock %}
