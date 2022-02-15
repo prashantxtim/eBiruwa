@@ -14,3 +14,4 @@ class Donateform(models.Model):
     class Meta:
 
         db_table = "alldonations"
+        

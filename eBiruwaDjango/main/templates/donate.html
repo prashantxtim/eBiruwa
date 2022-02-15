@@ -59,10 +59,11 @@
     <div class="wrapper">
         <h2>Donate to eBiruwa</h2>
         <form action="" method="post">
+            {% csrf_token %}
             <!--Account Information Start-->
             <div class="input_group">
                 <div class="input_box">
-                    <input type="text" placeholder="Name of the Donor" required class="name">
+                    <input type="text" name="name" placeholder="Name of the Donor" required class="name">
                     <i class="fa fa-user icon"></i>
                 </div>
             </div>
@@ -71,19 +72,19 @@
 
             <div class="input_group">
                 <div class="input_box">
-                    <input type="email" placeholder="Email Address" required class="name">
+                    <input type="email" name="email" placeholder="Email Address" required class="name">
                     <i class="fa fa-envelope icon"></i>
                 </div>
             </div>
             <div class="input_group">
                 <div class="input_box">
-                    <input type="text" placeholder="Address" required class="name">
+                    <input type="text" name="address" placeholder="Address" required class="name">
                     <i class="fa fa-map-marker icon" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="input_group">
                 <div class="input_box">
-                    <input type="text" placeholder="City" required class="name">
+                    <input type="text" name="city" placeholder="city" required class="name">
                     <i class="fa fa-institution icon"></i>
                 </div>
             </div>
@@ -94,7 +95,7 @@
 
             <div class="input_group">
                 <div class="input_box">
-                    <input type="tel" name="" class="name" placeholder="Name on Card" required>
+                    <input type="tel" class="name" placeholder="Name on Card" required>
                     <i class="fa fa-credit-card icon"></i>
                 </div>
             </div>
@@ -125,7 +126,7 @@
                 </div>
             </div>
             <div class="input_box">
-                <input type="number" placeholder="Enter Amount ~ 1$ = 1 Tree Planted" required class="name">
+                <input type="number" name="amount" placeholder="Enter Amount ~ 1$ = 1 Tree Planted" required class="name">
                 <i class="fa fa-money icon" aria-hidden="true"></i>
             </div>
             <br>
