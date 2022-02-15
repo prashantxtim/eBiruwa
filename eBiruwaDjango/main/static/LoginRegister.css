@@ -11,7 +11,7 @@ body {
   height: 100%;
   width: 100%;
   place-items: center;
-  background: #e5e5e5;
+  background: url("/static/Media/Images/pexels-taryn-elliott-4183522.jpeg") no-repeat center;
 }
 ::selection {
   background: #137949;

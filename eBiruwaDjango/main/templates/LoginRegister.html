@@ -1,5 +1,4 @@
 {% load static %}
-{% block content%}
 
 
 <!DOCTYPE html>
@@ -17,9 +16,6 @@
         <meta name="theme-color" content="#ffffff">
     
         <!-- Favicon Ends-->
-
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'LoginRegister.css' %}">
 
 
     <meta charset="utf-8" />
@@ -51,12 +47,13 @@
           <div class="slider-tab"></div>
         </div>
         <div class="form-inner">
-          <form action="#" class="login">
+          <form action="/signin/" method="POST" class="login">
+            {% csrf_token %}
             <div class="field">
-              <input type="text" placeholder="Email Address" required />
+              <input type="text" name="donor_email" placeholder="Email Address" required />
             </div>
             <div class="field">
-              <input type="password" placeholder="Password" required />
+              <input type="password" name="donor_password" placeholder="Password" required />
             </div>
             <div class="pass-link">
               <a href="AdminLogin.html"> <i class="fas fa-user-cog">&nbsp;&nbsp;</i>Login as Admin instead?</a>
@@ -69,15 +66,19 @@
               Don't have an account? <a href="">Signup Here</a>
             </div>
           </form>
-          <form action="#" class="signup">
+
+
+          <!-- registration -->
+          <form action="" method="post" class="signup">
+            {% csrf_token %}
             <div class="field">
-              <input type="text" placeholder="Username" required />
+              <input type="text" name="donor_username" placeholder="Username" required />
             </div>
             <div class="field">
-              <input type="password" placeholder="Email Address" required />
+              <input type="email" name="donor_email" placeholder="Email Address" required />
             </div>
             <div class="field">
-              <input type="password" placeholder="Password" required />
+              <input type="password" name="donor_password" placeholder="Password" required />
             </div>
             <div class="field btn">
               <div class="btn-layer"></div>
@@ -108,4 +109,3 @@
     </script>
   </body>
 </html>
-{% endblock %}
