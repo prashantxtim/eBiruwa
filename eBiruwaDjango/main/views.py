@@ -8,8 +8,10 @@ def LoginRegister(request):
     if request.method=="POST":
 
         customers=CustomerForm(request.POST,request.FILES)
+    
 
         customers.save()
+        
         return redirect("/index/")
         
     return render(request,"LoginRegister.html")
@@ -21,6 +23,7 @@ def signin(request):
         donor_password=request.POST.get('donor_password')
         user=Donor.objects.get(donor_email=donor_name,donor_password=donor_password)
         if user is not None:
+            request.session['donor_email']=user.donor_email
             return redirect("/index/")
 
     return render (request,"LoginRegister.html")
@@ -36,3 +39,8 @@ def donate(request):
 
 def index(request):
     return render(request, "index.html")
+
+def logout(request):
+    request.session.flush()
+    return redirect("/signin/")
+
