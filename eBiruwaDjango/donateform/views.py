@@ -14,3 +14,7 @@ def dform(request):
         return redirect("/index/")
 
     return render(request, "donate.html",)
+
+
+def index(request):
+    return render(request, "index.html")

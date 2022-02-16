@@ -1,0 +1,52 @@
+<head>
+    {% load static %}
+
+    <!-- Favicon Starts-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static '/Media/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static '/Media/favicon-32x32.png' %}">
+    <link rel="i'con" type="image/png" sizes="16x16" href="{% static '/Media//favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'Media/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static '/Media/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Favicon Ends-->
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'donate.css' %}">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBiruwa | 1$ = 1 Tree Planted</title>
+    <link rel="stylesheet" href="{% static '/eBiruwaDjango/main/static/donate.css' %}">
+    <link rel="stylesheet" href="{% static 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' %}">
+    <script src="https://kit.fontawesome.com/3a78a9c112.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="https://kit.fontawesome.com/3a78a9c112.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar sticky">
+        <div class="max-width">
+            <div class="logo"><a href="/index">eBiruwa</a></div>
+            <ul class="menu">
+                <li><a href="/index" class="menu-btn">Home</a></li>
+                <li><a href="/index#howitworks" class="menu-btn">How it Works</a></li>
+                <li><a href="/index#ourappeal" class="menu-btn">Our Appeal</a></li>
+                <li><a href="/index#donors" class="menu-btn">Top Donors</a></li>
+                <li><a href="/donor/dform" class="menu-btn">Donate Now</a></li>
+                <li><a href="/register">Login / Signup</a></li>
+
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %} {% endblock %}
