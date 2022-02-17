@@ -9,6 +9,8 @@ urlpatterns = [
     path('donate/', views.donate, name='donate'),
     path('', views.LoginRegister, name='LoginRegister'),
     path('admin/login/', views.AdminLogin, name='AdminLogin'),
-    path('logout/', views.logout, name='logout')
+    path('logout/', views.logout, name='logout'),
+    path('edit-profile', views.edit_profile_view, name='edit-profile'),
+    path('update/<int:c_id>', views.update, name="update"),
 
 ]

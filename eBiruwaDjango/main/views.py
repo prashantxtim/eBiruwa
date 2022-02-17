@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from main.models import *
 from .forms import *
+from django.contrib.auth.models import User
+from .import models, forms
 # Create your views here.
 
 
@@ -15,7 +17,7 @@ def LoginRegister(request):
         return redirect("/index/")
         
     return render(request,"LoginRegister.html")
-
+ 
 
 def signin(request):
     if request.method=='POST':
@@ -43,4 +45,17 @@ def index(request):
 def logout(request):
     request.session.flush()
     return redirect("/signin/")
+
+def edit_profile_view(request):
+    donor=Donor.objects.get(donor_email= request.session['donor_email'])
+    return render(request, "edit_profile.html", {'donor' : donor})
+
+def update(request,c_id):
+    donor=Donor.objects.get(donor_id=c_id)
+    form = CustomerForm(request.POST, instance=donor)
+    print(form)
+    form.save()
+    return redirect( "/index")
+
+
 
