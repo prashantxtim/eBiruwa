@@ -1,0 +1,428 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* styling css */
+section{
+    padding: 100px 0;
+}
+.max-width
+{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    align-content: center;
+}
+.ourappeal, .howitworks, .skills, .donors, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.ourappeal .ourappeal-content,
+.howitworks .serv-content,
+.donors .serv-content,
+.skills .skills-content
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #1DBF73;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* navbar css */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background: #1DBF73;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.navbar .logo a span{
+    color: #1DBF73;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #ffffff;
+}
+
+/* menu btn css */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home section css */
+.home{
+    display: flex;
+    background: url("Media/Images/eBiruwa\ Header\ Gif.gif") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 25px;
+}
+.home .home-content .text-2{
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+.home .home-content .text-3{
+    font-size: 25px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: #1DBF73;
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background: #1DBF73;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    align-content: center;
+}
+.home .home-content a:hover{
+    color: #ffffff;
+    background: #1ba263;
+}
+/* ourappeal section css */
+
+.ourappeal .ourappeal-content .left{
+    width: 45%;
+}
+.ourappeal .ourappeal-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+.ourappeal .ourappeal-content .right{
+    width: 55%;
+}
+.ourappeal .ourappeal-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.ourappeal .ourappeal-content .right .text span{
+    color: #1DBF73;
+}
+.ourappeal .ourappeal-content .right p{
+    text-align: justify;
+}
+.ourappeal .ourappeal-content .right a{
+    display: inline-block;
+    background: #1DBF73;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    align-content: center;
+}
+.ourappeal .ourappeal-content .right a:hover{
+    background: #1BA263;
+    color: #f1f1f1;
+}
+/* howitworks section css */
+.howitworks{
+    color:#000000;
+    background: #f2f2f2;
+}
+.howitworks .title::before{
+    background: #000000;
+}
+.howitworks .title::after{
+    background: #f2f2f2;
+}
+.howitworks .serv-content .card{
+    width: calc(33% - 20px);
+    background: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.howitworks .serv-content .card:hover{
+    background: #1DBF73;
+    color: #ffffff;
+}
+.howitworks .serv-content .card .box{
+    transition: all 0.1s ease;
+}
+.howitworks .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.howitworks .serv-content .card i{
+    font-size: 50px;
+    color: #1DBF73;
+    transition: color ease;
+}
+.howitworks .serv-content .card:hover i{
+    color: #fff;
+}
+.howitworks .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* donors section css */
+
+.donors{
+    color:#000000;
+    background: #f2f2f2;
+}
+.donors .title::before{
+    background: #000000;
+}
+.donors .title::after{
+    background: #f2f2f2;
+}
+.donors .serv-content .card{
+    width: calc(24% - 20px);
+    background: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.donors .serv-content .card:hover{
+    background: #1DBF73;
+    color: #ffffff;
+}
+.donors .serv-content .card .box{
+    transition: all 0.1s ease;
+}
+.donors .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.donors .serv-content .card i{
+    font-size: 50px;
+    color: #1DBF73;
+    transition: color ease;
+}
+.donors .serv-content .card:hover i{
+    color: #fff;
+}
+.donors .serv-content .card .text{
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.donors img{
+    border-radius: 50%;
+    border: solid;
+    border-color: #1DBF73;
+}
+
+
+
+/* footer section css */
+footer{
+    background: rgb(0, 0, 0);
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: #1DBF73;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+/* responsivness css */
+
+@media (max-width: 1104px) {
+    .ourappeal .ourappeal-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "close";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #1DBF73;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .ourappeal .ourappeal-content .column{
+        width: 100%;
+    }
+    .ourappeal .ourappeal-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .ourappeal .ourappeal-content .right{
+        flex: 100%;
+    }
+    .howitworks .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .howitworks .serv-content .card{
+        width: 100%;
+    }
+
+    .donors .serv-content .card{
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .ourappeal .ourappeal-content .right .text{
+        font-size: 19px;
+    }
+
+@media all and (max-width: 500px){
+    .thankyou-content .max-width .img{
+        height: 350px;
+        width: 350px;
+    }
+    
+}
+
+}

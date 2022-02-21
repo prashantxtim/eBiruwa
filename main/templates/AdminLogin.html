@@ -1,0 +1,108 @@
+{% load static %}
+{% block content%}
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'AdminLogin.css' %}">
+
+
+        <!-- Favicon Starts-->
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static '/Media/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static '/Media/favicon-32x32.png' %}">
+        <link rel="i'con" type="image/png" sizes="16x16" href="{% static '/Media//favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'Media/site.webmanifest' %}">
+        <link rel="mask-icon" href="{% static '/Media/safari-pinned-tab.svg' %}" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    
+        <!-- Favicon Ends-->
+
+
+    <meta charset="utf-8" />
+    <title>Admin Login | eBiruwa</title>
+    <link rel="stylesheet" href="{% static '/AdminLogin.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/3a78a9c112.js" crossorigin="anonymous"></script>
+  </head>
+  <STYLE>A {text-decoration: none;} </STYLE>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">
+          <a href= "/index.html">
+            <img
+              src="{% static '/Media/eBiruwa Transparent Logo/Admin eBiruwa.png' %}"
+              alt=""
+              height="59"
+              width="200"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Login</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form action="/user/adminlogin/" class="login" method="post">
+            {% csrf_token %}
+            <div class="field">
+              <input name="username" type="text" placeholder="Uername" required />
+            </div>
+            <div class="field">
+              <input name="password" type="password" placeholder="Password" required />
+            </div>
+            <div class="pass-link">
+              <a href="/"> <i class="fas fa-user">&nbsp;&nbsp; </i>Login as User instead?</a>
+            </div> 
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login" />
+            </div>
+          </form>
+          <form action="#" class="signup">
+            <div class="field">
+              <input type="text" placeholder="Username" required />
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Email Address" required />
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Password" required />
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="">
+                  <form action="#" class="signup">
+                <div class="field">
+                  <input type="text" placeholder="Username" required />
+                </div>
+                <div class="field">
+                  <input type="password" placeholder="Email Address" required />
+                </div>
+                <div class="field">
+                  <input type="password" placeholder="Password" required />
+                </div>
+                <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="submit" value="Signup" />
+                </div>
+              </form>" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+    </script>
+  </body>
+</html>
+{% endblock %}
